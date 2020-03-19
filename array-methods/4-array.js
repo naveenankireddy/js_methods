@@ -30,12 +30,33 @@ var data = [
 // 1 human year = 7 dog year
 
 // your code goes here
+let arr = 0;
+function allDogAge(data){
+  for(let x of data){
+    if(x.type === "dog"){
+      let newarr = x.age * 7;
+      arr = arr + newarr;
+    }
+  }
+  console.log(arr)
+}
+allDogAge(data);
+
+
 
 // Solution is 105
 
 // Write the same function using
 // 1. filter - for filtering the cat or dog
 // 2. map - to multiply human year to dog year
-// 3. reduce - to accumulate total age.
 
+function allDogAge(data){
+  let arr = data.map(x => x.age * 7)
+  console.log(arr);
+}
+// 3. reduce - to accumulate total age.
+ function allDogAge(data){
+   let arr = data.reduce((acc,cv) => (acc=acc+cv));
+   console.log(arr);
+ }
 // Solution 105
